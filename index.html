@@ -41,10 +41,17 @@
     border-bottom:1px solid var(--border);
     background:linear-gradient(180deg, rgba(24,29,42,.6), transparent);
   }
-  .avatar{
-    width:96px;height:96px;border-radius:50%;
+  /* Vtuber character portrait (YouTube channel profile picture) shown above the channel name */
+  .vtuber{
+    width:180px;height:180px;border-radius:28px;object-fit:cover;display:block;
     border:3px solid var(--accent);
-    box-shadow:0 0 0 4px rgba(245,185,66,.15), 0 8px 30px rgba(0,0,0,.5);
+    box-shadow:0 0 0 5px rgba(245,185,66,.15), 0 12px 40px rgba(0,0,0,.55);
+    background:#f5f5f7;
+    transition:transform .25s ease, box-shadow .25s ease;
+  }
+  .vtuber:hover{
+    transform:translateY(-3px) scale(1.02);
+    box-shadow:0 0 0 6px rgba(245,185,66,.22), 0 16px 48px rgba(0,0,0,.6);
   }
   h1{font-size:clamp(26px,4vw,38px);font-weight:700;letter-spacing:1px;}
   h1 .jp{color:var(--accent);}
@@ -139,14 +146,15 @@
   @media(max-width:520px){
     .grid{grid-template-columns:1fr;}
     .wrap{padding-top:24px;}
+    .vtuber{width:150px;height:150px;border-radius:24px;}
   }
 </style>
 </head>
 <body>
 
 <header>
-  <img class="avatar" alt="Retro Dee 歌人 avatar"
-       src="https://yt3.ggpht.com/wY7Z9JybkQuUedH3qhS7DCQh3lRWhVgodku89bV-xeDNrMmZ2vLzKIS87mwYPrDJQgzSAPFf7Q=s600-c-k-c0x00ffffff-no-rj-rp-mo">
+  <!-- Vtuber character portrait from the YouTube channel profile picture -->
+  <img class="vtuber" src="https://yt3.ggpht.com/wY7Z9JybkQuUedH3qhS7DCQh3lRwhVgodku89bV-xeDNrMmZ2vLzKIS87mwYPrDJQgzSAPFf7Q=s600-c-k-c0x00ffffff-no-rj-rp-mo" alt="Retro Dee 歌人 Vtuber character">
   <h1>Retro Dee <span class="jp">歌人</span></h1>
   <p class="subtitle">Curated PC game picks from Bandai Namco, Capcom &amp; S-GAME on Fanatical. Click any game to see the latest deal!</p>
   <div class="header-links">
