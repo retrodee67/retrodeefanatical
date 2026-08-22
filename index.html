@@ -1,293 +1,355 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Retro Dee 歌人 — FromSoftware · Capcom · Konami · Koei Tecmo | Fanatical Partner</title>
-  <meta name="description" content="Curated PC game picks from Retro Dee 歌人. Official Fanatical affiliate featuring FromSoftware, Capcom, Konami & Koei Tecmo.">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
-  <style>
-    :root {
-      --bg: #0d0d10;
-      --surface: #141419;
-      --surface-hover: #1a1a22;
-      --border: #272730;
-      --text: #f0f0f5;
-      --text-secondary: #a0a0b0;
-      --text-muted: #6e6e80;
-      --accent: #e03030;
-      --accent-soft: rgba(224, 48, 48, 0.12);
-      --radius-sm: 8px;
-      --radius-md: 10px;
-      --radius-lg: 12px;
-    }
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-    body {
-      font-family: 'Inter', system-ui, sans-serif;
-      background: var(--bg);
-      color: var(--text);
-      line-height: 1.5;
-      min-height: 100vh;
-    }
-    a { color: inherit; text-decoration: none; }
-    .container { max-width: 1080px; margin: 0 auto; padding: 24px 16px; }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Retro Dee 歌人 — Bandai Namco · Capcom · S-GAME | Fanatical Partner</title>
 
-    .header {
-      display: flex; align-items: center; gap: 20px;
-      padding: 24px; background: var(--surface);
-      border: 1px solid var(--border); border-radius: var(--radius-lg);
-      margin-bottom: 20px;
-    }
-    .avatar {
-      width: 88px; height: 88px; border-radius: 50%;
-      object-fit: cover; border: 2px solid var(--accent);
-      flex-shrink: 0; box-shadow: 0 0 0 4px var(--accent-soft);
-    }
-    .header-text h1 { font-size: 22px; font-weight: 600; letter-spacing: -0.2px; margin-bottom: 6px; }
-    .header-text p { font-size: 14px; color: var(--text-secondary); max-width: 540px; }
-    .badge {
-      display: inline-flex; align-items: center; gap: 6px;
-      margin-top: 8px; padding: 4px 10px;
-      background: var(--accent-soft); color: var(--accent);
-      border-radius: var(--radius-sm); font-size: 12px; font-weight: 500;
-    }
-    .socials { display: flex; gap: 10px; margin-top: 10px; }
-    .social {
-      display: inline-flex; align-items: center; gap: 6px;
-      padding: 6px 12px; border-radius: var(--radius-sm);
-      border: 1px solid var(--border); font-size: 13px; font-weight: 500;
-      color: var(--text-secondary); transition: all 0.15s;
-    }
-    .social:hover { background: var(--surface-hover); color: var(--text); border-color: var(--text-muted); }
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/fontsource/css/chakra-petch@latest/latin-400-normal.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/fontsource/css/chakra-petch@latest/latin-500-normal.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/fontsource/css/chakra-petch@latest/latin-600-normal.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/fontsource/css/chakra-petch@latest/latin-700-normal.css">
 
-    .controls { margin-bottom: 14px; }
-    .search-wrap { position: relative; margin-bottom: 12px; }
-    .search-wrap svg {
-      position: absolute; left: 12px; top: 50%; transform: translateY(-50%);
-      color: var(--text-muted); pointer-events: none;
-    }
-    .search-wrap input {
-      width: 100%; padding: 11px 14px 11px 40px;
-      background: var(--surface); color: var(--text);
-      border: 1px solid var(--border); border-radius: var(--radius-md);
-      font-size: 14px; outline: none; transition: border-color 0.15s;
-    }
-    .search-wrap input:focus { border-color: var(--text-muted); }
-    .tabs { display: flex; gap: 6px; flex-wrap: wrap; }
-    .tab {
-      padding: 8px 14px; border-radius: var(--radius-sm);
-      border: 1px solid transparent; background: transparent;
-      color: var(--text-muted); font-size: 13px; font-weight: 500;
-      cursor: pointer; transition: all 0.15s; font-family: inherit;
-    }
-    .tab:hover { background: var(--surface-hover); color: var(--text-secondary); }
-    .tab.active { background: var(--text); color: var(--bg); }
+<style>
+  :root{
+    --bg:#0d0f14;
+    --bg2:#131722;
+    --card:#181d2a;
+    --border:#2a3247;
+    --text:#e8ecf5;
+    --muted:#93a0bd;
+    --accent:#f5b942;
+    --accent2:#ff7847;
+  }
+  *{margin:0;padding:0;box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    font-family:'Chakra Petch',system-ui,-apple-system,sans-serif;
+    background:
+      radial-gradient(1200px 600px at 80% -10%, rgba(245,185,66,.08), transparent 60%),
+      radial-gradient(900px 500px at 10% 0%, rgba(255,120,71,.06), transparent 55%),
+      var(--bg);
+    color:var(--text);
+    min-height:100vh;
+  }
+  .wrap{max-width:1200px;margin:0 auto;padding:40px 20px 60px;}
 
-    .pub-note { font-size: 12px; color: var(--text-muted); margin-bottom: 12px; padding: 0 4px; }
+  /* ===== Header ===== */
+  header{
+    display:flex;flex-direction:column;align-items:center;text-align:center;
+    gap:14px;padding:28px 20px 36px;
+    border-bottom:1px solid var(--border);
+    background:linear-gradient(180deg, rgba(24,29,42,.6), transparent);
+  }
+  .avatar{
+    width:96px;height:96px;border-radius:50%;
+    border:3px solid var(--accent);
+    box-shadow:0 0 0 4px rgba(245,185,66,.15), 0 8px 30px rgba(0,0,0,.5);
+  }
+  h1{font-size:clamp(26px,4vw,38px);font-weight:700;letter-spacing:1px;}
+  h1 .jp{color:var(--accent);}
+  .subtitle{color:var(--muted);max-width:640px;font-size:15px;line-height:1.6;}
+  .header-links{display:flex;gap:12px;flex-wrap:wrap;justify-content:center;margin-top:6px;}
+  .btn{
+    display:inline-flex;align-items:center;gap:8px;
+    padding:10px 22px;border-radius:999px;font-weight:600;font-size:14px;
+    text-decoration:none;transition:transform .18s ease, box-shadow .18s ease, background .18s ease;
+  }
+  .btn-yt{background:#ff2d2d;color:#fff;}
+  .btn-yt:hover{transform:translateY(-2px);box-shadow:0 6px 18px rgba(255,45,45,.4);}
+  .btn-fan{background:linear-gradient(90deg,var(--accent),var(--accent2));color:#161206;}
+  .btn-fan:hover{transform:translateY(-2px);box-shadow:0 6px 18px rgba(245,185,66,.4);}
+  .btn svg{width:16px;height:16px;fill:currentColor;}
 
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
-      gap: 14px;
-    }
-    .card {
-      background: var(--surface); border: 1px solid var(--border);
-      border-radius: var(--radius-md); overflow: hidden;
-      transition: transform 0.15s, box-shadow 0.15s, border-color 0.15s;
-    }
-    .card:hover {
-      transform: translateY(-3px);
-      border-color: rgba(224,48,48,0.4);
-      box-shadow: 0 8px 24px rgba(0,0,0,0.35);
-    }
-    .cover {
-      width: 100%; aspect-ratio: 460 / 215;
-      background: linear-gradient(135deg, #1a1a24 0%, #241a1a 100%);
-      display: flex; align-items: center; justify-content: center;
-      position: relative; overflow: hidden;
-    }
-    .cover img {
-      width: 100%; height: 100%; object-fit: cover; display: block;
-      transition: transform 0.3s;
-    }
-    .card:hover .cover img { transform: scale(1.03); }
-    .tag {
-      position: absolute; top: 10px; left: 10px;
-      padding: 3px 8px; border-radius: var(--radius-sm);
-      font-size: 11px; font-weight: 600; color: #fff;
-      text-shadow: 0 1px 2px rgba(0,0,0,0.4);
-    }
-    .tag.fromsoft { background: #c0392b; }
-    .tag.capcom { background: #2980b9; }
-    .tag.konami { background: #8e44ad; }
-    .tag.koei { background: #d35400; }
-    .info { padding: 14px; }
-    .title {
-      font-size: 14px; font-weight: 500; line-height: 1.35;
-      display: -webkit-box; -webkit-line-clamp: 2;
-      -webkit-box-orient: vertical; overflow: hidden;
-    }
-    .empty {
-      grid-column: 1 / -1; text-align: center; padding: 60px 20px;
-      color: var(--text-muted); font-size: 14px;
-    }
-    .footer {
-      margin-top: 32px; text-align: center; padding: 20px;
-      border-top: 1px solid var(--border); color: var(--text-muted); font-size: 12px;
-    }
-    .footer a { color: var(--text-secondary); text-decoration: underline; text-underline-offset: 2px; }
-    .footer a:hover { color: var(--text); }
+  /* ===== Tabs ===== */
+  .tabs{
+    display:flex;gap:10px;flex-wrap:wrap;justify-content:center;
+    padding:26px 0 8px;
+  }
+  .tab{
+    padding:9px 20px;border-radius:999px;cursor:pointer;
+    background:var(--card);border:1px solid var(--border);
+    color:var(--muted);font-size:14px;font-weight:600;font-family:inherit;
+    transition:all .18s ease;
+  }
+  .tab:hover{color:var(--text);border-color:var(--accent);}
+  .tab.active{
+    background:linear-gradient(90deg,var(--accent),var(--accent2));
+    color:#161206;border-color:transparent;
+    box-shadow:0 4px 14px rgba(245,185,66,.35);
+  }
 
-    @media (max-width: 560px) {
-      .header { flex-direction: column; text-align: center; }
-      .grid { grid-template-columns: repeat(2, 1fr); }
-    }
-  </style>
+  /* ===== Game Grid ===== */
+  .publisher-heading{
+    text-align:center;color:var(--muted);font-size:13px;letter-spacing:2px;
+    text-transform:uppercase;margin:26px 0 18px;
+  }
+  .grid{
+    display:grid;gap:22px;
+    grid-template-columns:repeat(auto-fill,minmax(270px,1fr));
+  }
+  .card{
+    background:var(--card);border:1px solid var(--border);border-radius:14px;
+    overflow:hidden;text-decoration:none;color:inherit;
+    display:flex;flex-direction:column;
+    transition:transform .2s ease, border-color .2s ease, box-shadow .2s ease;
+    animation:fadeIn .35s ease both;
+  }
+  .card:hover{
+    transform:translateY(-5px);
+    border-color:var(--accent);
+    box-shadow:0 14px 34px rgba(0,0,0,.5), 0 0 0 1px rgba(245,185,66,.25);
+  }
+  @keyframes fadeIn{
+    from{opacity:0;transform:translateY(12px);}
+    to{opacity:1;transform:translateY(0);}
+  }
+  .thumb-wrap{position:relative;aspect-ratio:16/9;overflow:hidden;background:#0a0c11;}
+  .thumb-wrap img{
+    width:100%;height:100%;object-fit:cover;display:block;
+    transition:transform .35s ease;
+  }
+  .card:hover .thumb-wrap img{transform:scale(1.06);}
+  .badge{
+    position:absolute;top:10px;left:10px;
+    background:rgba(10,12,17,.82);backdrop-filter:blur(4px);
+    border:1px solid var(--border);border-radius:6px;
+    padding:4px 9px;font-size:11px;font-weight:600;color:var(--accent);
+    letter-spacing:.5px;
+  }
+  .card-body{padding:14px 16px 16px;display:flex;flex-direction:column;gap:10px;flex:1;}
+  .card-title{font-size:15px;font-weight:600;line-height:1.4;}
+  .deal-hint{
+    margin-top:auto;display:inline-flex;align-items:center;gap:6px;
+    font-size:12.5px;font-weight:700;color:var(--accent);
+    text-transform:uppercase;letter-spacing:1px;
+  }
+  .deal-hint::after{content:"→";transition:transform .18s ease;}
+  .card:hover .deal-hint::after{transform:translateX(4px);}
+
+  /* ===== Footer ===== */
+  footer{
+    margin-top:56px;padding:28px 20px;text-align:center;
+    border-top:1px solid var(--border);
+    color:var(--muted);font-size:13.5px;line-height:2;
+  }
+  footer a{color:var(--accent);text-decoration:none;font-weight:600;}
+  footer a:hover{text-decoration:underline;}
+
+  @media(max-width:520px){
+    .grid{grid-template-columns:1fr;}
+    .wrap{padding-top:24px;}
+  }
+</style>
 </head>
 <body>
-  <div class="container">
-    <div class="header">
-      <img class="avatar" src="https://yt3.ggpht.com/wY7Z9JybkQuUedH3qhS7DCQh3lRwhVgodku89bV-xeDNrMmZ2vLzKIS87mwYPrDJQgzSAPFf7Q=s600-c-k-c0x00ffffff-no-rj-rp-mo" alt="Retro Dee">
-      <div class="header-text">
-        <h1>Retro Dee 歌人</h1>
-        <p>Curated PC game picks from FromSoftware, Capcom, Konami & Koei Tecmo on Fanatical. Click any game to see the latest deal!</p>
-        <div class="socials">
-          <a class="social" href="https://www.youtube.com/channel/UCptkU4JrSFe62AxUCAq2RhA" target="_blank" rel="noopener">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
-            YouTube
-          </a>
-          <a class="social" href="https://www.fanatical.com/?ref=ywmzodc" target="_blank" rel="noopener">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
-            Fanatical
-          </a>
-        </div>
-      </div>
-    </div>
 
-    <div class="controls">
-      <div class="search-wrap">
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M11.5 3C16.1944 3 20 6.80558 20 11.5C20 13.523 19.2933 15.381 18.1132 16.8404L21.1364 19.8636C21.4879 20.2151 21.4879 20.7849 21.1364 21.1364C20.7849 21.4879 20.2151 21.4879 19.8636 21.1364L16.8404 18.1132C15.381 19.2933 13.523 20 11.5 20C6.80558 20 3 16.1944 3 11.5C3 6.80558 6.80558 3 11.5 3Z" fill="currentColor"/></svg>
-        <input type="text" id="search" placeholder="Search games..." oninput="render()">
-      </div>
-      <div class="tabs">
-        <button class="tab active" data-cat="all" onclick="setTab('all')">All publishers</button>
-        <button class="tab" data-cat="fromsoft" onclick="setTab('fromsoft')">FromSoftware</button>
-        <button class="tab" data-cat="capcom" onclick="setTab('capcom')">Capcom</button>
-        <button class="tab" data-cat="konami" onclick="setTab('konami')">Konami</button>
-        <button class="tab" data-cat="koei" onclick="setTab('koei')">Koei Tecmo</button>
-      </div>
-    </div>
-
-    <div class="pub-note" id="pubNote"></div>
-    <div class="grid" id="grid"></div>
-
-    <div class="footer">
-      All game keys are officially licensed via <a href="https://www.fanatical.com/?ref=ywmzodc" target="_blank" rel="noopener">Fanatical</a>.
-      Purchases support <strong>Retro Dee 歌人</strong> at no extra cost.
-      <br>Click any game to see the latest price and deal on Fanatical.
-    </div>
+<header>
+  <img class="avatar" alt="Retro Dee 歌人 avatar"
+       src="https://yt3.ggpht.com/wY7Z9JybkQuUedH3qhS7DCQh3lRWhVgodku89bV-xeDNrMmZ2vLzKIS87mwYPrDJQgzSAPFf7Q=s600-c-k-c0x00ffffff-no-rj-rp-mo">
+  <h1>Retro Dee <span class="jp">歌人</span></h1>
+  <p class="subtitle">Curated PC game picks from Bandai Namco, Capcom &amp; S-GAME on Fanatical. Click any game to see the latest deal!</p>
+  <div class="header-links">
+    <a class="btn btn-yt" href="https://www.youtube.com/channel/UCptkU4JrSFe62AxUCAq2RhA" target="_blank" rel="noopener">
+      <svg viewBox="0 0 24 24"><path d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.5 12 3.5 12 3.5s-7.5 0-9.4.6A3 3 0 0 0 .5 6.2 31.2 31.2 0 0 0 0 12a31.2 31.2 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.6 9.4.6 9.4.6s7.5 0 9.4-.6a3 3 0 0 0 2.1-2.1A31.2 31.2 0 0 0 24 12a31.2 31.2 0 0 0-.5-5.8zM9.6 15.6V8.4L15.8 12l-6.2 3.6z"/></svg>
+      YouTube
+    </a>
+    <a class="btn btn-fan" href="https://www.fanatical.com/?ref=ywmzodc" target="_blank" rel="noopener">
+      <svg viewBox="0 0 24 24"><path d="M12 2c-1 4-5 5.5-5 10a5 5 0 0 0 10 0c0-1.8-.7-3.3-1.7-4.6-.4 1.1-1.2 2-2.3 2.4.5-2.4-.3-5.4-1-7.8z"/></svg>
+      Fanatical
+    </a>
   </div>
+</header>
 
-  <script>
-    const games = [
-      { title: "ELDEN RING", pub: "fromsoft", slug: "elden-ring", appid: 1245620 },
-      { title: "ELDEN RING NIGHTREIGN", pub: "fromsoft", slug: "elden-ring-nightreign", appid: 2622380 },
-      { title: "ELDEN RING Shadow of the Erdtree Edition", pub: "fromsoft", slug: "elden-ring-shadow-of-the-erdtree-edition", appid: 1245620 },
-      { title: "ELDEN RING Shadow of the Erdtree Deluxe", pub: "fromsoft", slug: "elden-ring-shadow-of-the-erdtree-deluxe-edition", appid: 2778590 },
-      { title: "ELDEN RING NIGHTREIGN Deluxe Edition", pub: "fromsoft", slug: "elden-ring-nightreign-deluxe-edition", appid: 2622380 },
-      { title: "DARK SOULS REMASTERED", pub: "fromsoft", slug: "dark-souls-remastered", appid: 570940 },
-      { title: "DARK SOULS III Deluxe Edition", pub: "fromsoft", slug: "dark-souls-iii-deluxe-edition", appid: 374320 },
-      { title: "Sekiro: Shadows Die Twice - GOTY Edition", pub: "fromsoft", slug: "sekiro-shadows-die-twice-goty-edition", appid: 814380 },
-      { title: "ARMORED CORE VI FIRES OF RUBICON", pub: "fromsoft", slug: "armored-core-vi-fires-of-rubicon", appid: 1888160 },
-      { title: "Resident Evil 6 Complete", pub: "capcom", slug: "resident-evil-6-complete", appid: 221040 },
-      { title: "Devil May Cry 5 Deluxe + Vergil", pub: "capcom", slug: "devil-may-cry-5-deluxe-vergil", appid: 601150 },
-      { title: "Devil May Cry 4 Special Edition", pub: "capcom", slug: "devil-may-cry-4-special-edition", appid: 329050 },
-      { title: "Devil May Cry HD Collection", pub: "capcom", slug: "devil-may-cry-hd-collection-gog", appid: 631510 },
-      { title: "Street Fighter 6 Years 1-2 Fighters Edition", pub: "capcom", slug: "street-fighter-6-years-1-2-fighters-edition", appid: 1364780 },
-      { title: "Street Fighter V Champion Edition + Season 5", pub: "capcom", slug: "street-fighter-v-champion-edition-season-5-premium-pass-bundle", appid: 1364780 },
-      { title: "Street Fighter Alpha 2", pub: "capcom", slug: "street-fighter-alpha-2-gog", appid: 375450 },
-      { title: "Phoenix Wright: Ace Attorney Trilogy", pub: "capcom", slug: "phoenix-wright-ace-attorney-trilogy", appid: 787480 },
-      { title: "Apollo Justice: Ace Attorney Trilogy", pub: "capcom", slug: "apollo-justice-ace-attorney-trilogy", appid: 2187220 },
-      { title: "ACE ATTORNEY ANTHOLOGY", pub: "capcom", slug: "ace-attorney-anthology", appid: 2187220 },
-      { title: "Resident Evil 4 Remake", pub: "capcom", slug: "resident-evil-4-remake", appid: 2050650 },
-      { title: "Resident Evil Village", pub: "capcom", slug: "resident-evil-village", appid: 1196590 },
-      { title: "Monster Hunter: World", pub: "capcom", slug: "monster-hunter-world", appid: 582010 },
-      { title: "METAL GEAR SOLID 3: Snake Eater — Master Collection", pub: "konami", slug: "metal-gear-solid-3-snake-eater-master-collection-version", appid: 2131650 },
-      { title: "METAL GEAR SOLID 2: Sons of Liberty — Master Collection", pub: "konami", slug: "metal-gear-solid-2-sons-of-liberty-master-collection-version", appid: 2131640 },
-      { title: "METAL GEAR SOLID Δ: SNAKE EATER", pub: "konami", slug: "metal-gear-solid-d-snake-eater", appid: 2417610 },
-      { title: "SILENT HILL 2 Digital Deluxe", pub: "konami", slug: "silent-hill-2-digital-deluxe", appid: 2124490 },
-      { title: "SILENT HILL f", pub: "konami", slug: "silent-hill-f", appid: 2947440 },
-      { title: "SILENT HILL f — Digital Deluxe", pub: "konami", slug: "silent-hill-f-digital-deluxe", appid: 2947440 },
-      { title: "Silent Hill: Homecoming", pub: "konami", slug: "silent-hill-homecoming", appid: 19000 },
-      { title: "SILENT HILL 2 & SILENT HILL f Deluxe Dual Pack", pub: "konami", slug: "silent-hill-2-and-silent-hill-f-deluxe-dual-pack", appid: 2124490 },
-      { title: "Castlevania: Lords of Shadow — Ultimate Edition", pub: "konami", slug: "castlevania-lords-of-shadow-ultimate-edition", appid: 234080 },
-      { title: "Castlevania: Lords of Shadow 2", pub: "konami", slug: "castlevania-lords-of-shadow-2", appid: 239250 },
-      { title: "Castlevania: Belmont's Curse Midnight Edition", pub: "konami", slug: "castlevania-belmonts-curse-midnight-edition", appid: 4231820 },
-      { title: "DYNASTY WARRIORS: ORIGINS", pub: "koei", slug: "dynasty-warriors-origins", appid: 2384580 },
-      { title: "DYNASTY WARRIORS 3: Complete Edition Remastered — Digital Deluxe", pub: "koei", slug: "dynasty-warriors-3-complete-edition-remastered-digital-deluxe-edition-pre-purchase", appid: 2384580 },
-      { title: "WARRIORS: Abyss — Hack'n'Dash Ultimate Edition", pub: "koei", slug: "warriors-abyss-hackndash-ultimate-edition", appid: 3178350 },
-      { title: "Fate/Samurai Remnant", pub: "koei", slug: "fate-samurai-remnant", appid: 1903340 },
-      { title: "NINJA GAIDEN 2 Black", pub: "koei", slug: "ninja-gaiden-2-black", appid: 1580790 },
-      { title: "Nioh: Complete Edition", pub: "koei", slug: "nioh-complete-edition", appid: 485510 },
-      { title: "Atelier Ryza 2: Lost Legends & the Secret Fairy DX", pub: "koei", slug: "atelier-ryza-2-lost-legends-and-te-secret-fairy-dx", appid: 1257290 },
-      { title: "Atelier Marie Remake: The Alchemist of Salburg", pub: "koei", slug: "atelier-marie-remake-the-alchemist-of-salburg", appid: 1998290 },
-      { title: "BLUE REFLECTION: Second Light Digital Deluxe Edition", pub: "koei", slug: "blue-reflection-second-light-digital-deluxe-edition", appid: 1423600 },
-    ];
+<main class="wrap">
+  <nav class="tabs" id="tabs"></nav>
+  <p class="publisher-heading" id="publisherHeading">Showing all publishers</p>
+  <section class="grid" id="grid"></section>
+</main>
 
-    const pubNotes = {
-      all: "Showing all curated picks from FromSoftware, Capcom, Konami & Koei Tecmo.",
-      fromsoft: "FromSoftware — Creators of Dark Souls, Elden Ring, Sekiro & Armored Core.",
-      capcom: "Capcom — Resident Evil, Devil May Cry, Street Fighter, Ace Attorney & Monster Hunter.",
-      konami: "Konami — Metal Gear, Silent Hill, Castlevania & the Master Collection.",
-      koei: "Koei Tecmo — Dynasty Warriors, Nioh, Atelier, Ninja Gaiden & Fate/Samurai Remnant.",
-    };
-    const pubLabels = { fromsoft: "FromSoftware", capcom: "Capcom", konami: "Konami", koei: "Koei Tecmo" };
+<footer>
+  All game keys are officially licensed via <a href="https://www.fanatical.com/?ref=ywmzodc" target="_blank" rel="noopener">Fanatical</a>.<br>
+  Purchases support Retro Dee 歌人 at no extra cost.<br>
+  Click any game to see the latest price and deal on Fanatical.
+</footer>
 
-    let currentCat = 'all';
+<script>
+  const REF = "ref=ywmzodc";
 
-    function steamHeader(appid) {
-      return `https://cdn.akamai.steamstatic.com/steam/apps/${appid}/header.jpg`;
+  const publishers = [
+    "All Publishers",
+    "Bandai Namco Entertainment",
+    "Capcom",
+    "S-GAME"
+  ];
+
+  const games = [
+    /* ---------- Bandai Namco Entertainment ---------- */
+    {
+      publisher: "Bandai Namco Entertainment",
+      name: "ELDEN RING",
+      url: "https://www.fanatical.com/en/game/elden-ring",
+      thumb: "https://fanatical.imgix.net/product/original/ef0033b4-d92b-43f6-9cec-c169d4e9a5cb.jpeg?auto=compress,format&w=307&fit=crop&h=173"
+    },
+    {
+      publisher: "Bandai Namco Entertainment",
+      name: "ELDEN RING Shadow of the Erdtree Edition",
+      url: "https://www.fanatical.com/en/game/elden-ring-shadow-of-the-erdtree-edition",
+      thumb: "https://fanatical.imgix.net/product/original/0813915c-7e89-4061-878f-200e42ccc784.jpeg?auto=compress,format&w=307&fit=crop&h=173"
+    },
+    {
+      publisher: "Bandai Namco Entertainment",
+      name: "ELDEN RING Shadow of the Erdtree Deluxe Edition",
+      url: "https://www.fanatical.com/en/game/elden-ring-shadow-of-the-erdtree-deluxe-edition",
+      thumb: "https://fanatical.imgix.net/product/original/37c9f024-820a-4556-ba57-586116cea3de.jpeg?auto=compress,format&w=307&fit=crop&h=173"
+    },
+    {
+      publisher: "Bandai Namco Entertainment",
+      name: "ELDEN RING NIGHTREIGN",
+      url: "https://www.fanatical.com/en/game/elden-ring-nightreign",
+      thumb: "https://fanatical.imgix.net/product/original/f60997cd-3e48-4c1b-b08c-c155302d077f.jpeg?auto=compress,format&w=307&fit=crop&h=173"
+    },
+    {
+      publisher: "Bandai Namco Entertainment",
+      name: "ELDEN RING NIGHTREIGN Deluxe Edition",
+      url: "https://www.fanatical.com/en/game/elden-ring-nightreign-deluxe-edition",
+      thumb: "https://fanatical.imgix.net/product/original/bec3678a-c317-4965-b37c-eb4b3720d709.jpeg?auto=compress,format&w=307&fit=crop&h=173"
+    },
+    {
+      publisher: "Bandai Namco Entertainment",
+      name: "DARK SOULS REMASTERED",
+      url: "https://www.fanatical.com/en/game/dark-souls-remastered",
+      thumb: "https://fanatical.imgix.net/product/original/fbc395cc-a07d-441e-bb43-eb00fd7d8b33.jpeg?auto=compress,format&w=307&fit=crop&h=173"
+    },
+    {
+      publisher: "Bandai Namco Entertainment",
+      name: "DARK SOULS II Scholar of the First Sin",
+      url: "https://www.fanatical.com/en/game/dark-souls-ii-scholar-of-the-first-sin",
+      thumb: "https://fanatical.imgix.net/product/original/747024b8-8413-49bd-8993-468170322b08.jpg?auto=compress,format&w=307&fit=crop&h=173"
+    },
+    {
+      publisher: "Bandai Namco Entertainment",
+      name: "DARK SOULS III",
+      url: "https://www.fanatical.com/en/game/dark-souls-iii",
+      thumb: "https://fanatical.imgix.net/product/original/4768f0e6-d9a0-4580-b361-efe3fa1696b2.jpg?auto=compress,format&w=307&fit=crop&h=173"
+    },
+
+    /* ---------- Capcom ---------- */
+    {
+      publisher: "Capcom",
+      name: "Resident Evil Requiem",
+      url: "https://www.fanatical.com/en/game/resident-evil-requiem",
+      thumb: "https://fanatical.imgix.net/product/original/5f3f4130-0902-4a6a-9493-d5cf307245dd.jpeg?auto=compress,format&w=307&fit=crop&h=173"
+    },
+    {
+      publisher: "Capcom",
+      name: "Resident Evil Requiem Deluxe Edition",
+      url: "https://www.fanatical.com/en/game/resident-evil-requiem-deluxe-edition",
+      thumb: "https://fanatical.imgix.net/product/original/9bb14e99-b5fa-44ca-8328-3e67dce28371.jpeg?auto=compress,format&w=307&fit=crop&h=173"
+    },
+    {
+      publisher: "Capcom",
+      name: "PRAGMATA",
+      url: "https://www.fanatical.com/en/game/pragmata",
+      thumb: "https://fanatical.imgix.net/product/original/9f0d852b-5735-4dcf-a4ee-5ddfa549fbd7.jpeg?auto=compress,format&w=307&fit=crop&h=173"
+    },
+    {
+      publisher: "Capcom",
+      name: "PRAGMATA Digital Deluxe",
+      url: "https://www.fanatical.com/en/game/pragmata-digital-deluxe",
+      thumb: "https://fanatical.imgix.net/product/original/6714598e-e554-40b4-b1bf-69f2c81210b8.jpeg?auto=compress,format&w=307&fit=crop&h=173"
+    },
+    {
+      publisher: "Capcom",
+      name: "Onimusha Way of the Sword",
+      url: "https://www.fanatical.com/en/game/onimusha-way-of-the-sword",
+      thumb: "https://fanatical.imgix.net/product/original/5994ccd7-42bc-4ade-9a46-9bb311b376f8.jpeg?auto=compress,format&w=307&fit=crop&h=173"
+    },
+    {
+      publisher: "Capcom",
+      name: "Onimusha Way of the Sword Deluxe Edition",
+      url: "https://www.fanatical.com/en/game/onimusha-way-of-the-sword-deluxe-edition",
+      thumb: "https://fanatical.imgix.net/product/original/ca9f4964-37f0-4e4f-babe-5d4d7d539e86.jpeg?auto=compress,format&w=307&fit=crop&h=173"
+    },
+    {
+      publisher: "Capcom",
+      name: "Onimusha Way of the Sword Premium Deluxe Edition",
+      url: "https://www.fanatical.com/en/game/onimusha-way-of-the-sword-premium-deluxe-edition",
+      thumb: "https://fanatical.imgix.net/product/original/01123243-f514-4fd1-b18f-a95bedd76b0f.jpeg?auto=compress,format&w=307&fit=crop&h=173"
+    },
+
+    /* ---------- S-GAME ---------- */
+    {
+      publisher: "S-GAME",
+      name: "Phantom Blade Zero",
+      url: "https://www.fanatical.com/en/game/phantom-blade-zero",
+      thumb: "https://fanatical.imgix.net/product/original/f6b7cb43-7ec6-4f2b-a1e5-fdfeaefbd1e5.jpeg?auto=compress,format&w=307&fit=crop&h=173"
+    },
+    {
+      publisher: "S-GAME",
+      name: "Phantom Blade Zero - Digital Deluxe Edition",
+      url: "https://www.fanatical.com/en/game/phantom-blade-zero-digital-deluxe-edition",
+      thumb: "https://fanatical.imgix.net/product/original/c4ac05fa-35a1-4f0b-8e9f-329664430f71.jpeg?auto=compress,format&w=307&fit=crop&h=173"
     }
+  ];
 
-    function render() {
-      const q = document.getElementById('search').value.toLowerCase();
-      document.getElementById('pubNote').textContent = pubNotes[currentCat] || '';
+  /* Append referral parameter to every game URL */
+  function withRef(url){
+    return url + (url.includes("?") ? "&" + REF : "?" + REF);
+  }
 
-      const filtered = games.filter(g => {
-        const catMatch = currentCat === 'all' || g.pub === currentCat;
-        const searchMatch = g.title.toLowerCase().includes(q);
-        return catMatch && searchMatch;
-      });
+  const tabsEl = document.getElementById("tabs");
+  const gridEl = document.getElementById("grid");
+  const headingEl = document.getElementById("publisherHeading");
 
-      const grid = document.getElementById('grid');
-      if (!filtered.length) {
-        grid.innerHTML = '<div class="empty">No games found. Try a different search or publisher.</div>';
-        return;
-      }
+  /* Build tabs */
+  publishers.forEach(function(pub, idx){
+    const btn = document.createElement("button");
+    btn.className = "tab" + (idx === 0 ? " active" : "");
+    btn.textContent = pub;
+    btn.addEventListener("click", function(){
+      document.querySelectorAll(".tab").forEach(function(t){ t.classList.remove("active"); });
+      btn.classList.add("active");
+      render(pub);
+    });
+    tabsEl.appendChild(btn);
+  });
 
-      grid.innerHTML = filtered.map(g => {
-        const url = `https://www.fanatical.com/en/game/${g.slug}?ref=ywmzodc`;
-        return `
-          <a class="card" href="${url}" target="_blank" rel="noopener">
-            <div class="cover">
-              <img src="${steamHeader(g.appid)}" alt="${g.title}" loading="lazy" onerror="this.style.display='none';this.parentElement.style.background='linear-gradient(135deg,#1a1a24,#241a1a)'">
-              <span class="tag ${g.pub}">${pubLabels[g.pub]}</span>
-            </div>
-            <div class="info">
-              <div class="title">${g.title}</div>
-            </div>
-          </a>`;
-      }).join('');
-    }
+  /* Render game cards */
+  function render(pub){
+    gridEl.innerHTML = "";
+    headingEl.textContent = pub === "All Publishers"
+      ? "Showing all publishers"
+      : "Showing games from " + pub;
 
-    function setTab(cat) {
-      currentCat = cat;
-      document.querySelectorAll('.tab').forEach(t => t.classList.toggle('active', t.dataset.cat === cat));
-      render();
-    }
+    const list = pub === "All Publishers"
+      ? games
+      : games.filter(function(g){ return g.publisher === pub; });
 
-    render();
-  </script>
+    list.forEach(function(g, i){
+      const card = document.createElement("a");
+      card.className = "card";
+      card.style.animationDelay = (i * 0.04) + "s";
+      card.href = withRef(g.url);
+      card.target = "_blank";
+      card.rel = "noopener";
+
+      card.innerHTML =
+        '<div class="thumb-wrap">' +
+          '<span class="badge">' + g.publisher + '</span>' +
+          '<img loading="lazy" src="' + g.thumb + '" alt="' + g.name + '">' +
+        '</div>' +
+        '<div class="card-body">' +
+          '<div class="card-title">' + g.name + '</div>' +
+          '<span class="deal-hint">View Deal on Fanatical</span>' +
+        '</div>';
+
+      gridEl.appendChild(card);
+    });
+  }
+
+  render("All Publishers");
+</script>
+
 </body>
 </html>
